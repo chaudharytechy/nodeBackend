@@ -11,7 +11,7 @@ class aboutController {
 
     static aboutInsert = async (req, res) => {
         try {
-            // dfvh
+            // dfvhiusghciuug
             const { sliderHeading, sliderDescripation, aboutHeading, aboutDescripation, chooseHeading, chooseDescripation } = req.body
             if (sliderHeading && sliderDescripation && aboutHeading && aboutDescripation && chooseHeading && chooseDescripation) {
                 if (req.files.sliderImage && req.files.aboutImage && req.files.chooseImage) {
