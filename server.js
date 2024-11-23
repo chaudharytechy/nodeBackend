@@ -9,7 +9,6 @@ require("dotenv").config();
 const cors = require("cors");
 // const connectDb=require("./db/connect_db")
 const bodyParser = require("body-parser");
-const fileUpload = require("express-fileupload");
 var cloudinary = require("cloudinary").v2;
 
 // Create a rate limit rule
@@ -44,11 +43,11 @@ cloudinary.config({
   secure: true,
 });
 
-// parse application/x-www-form-urlencoded
+
+// Middleware
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// parse application/json
 app.use(bodyParser.json());
-app.use(fileUpload({ useTempFiles: true }));
 
 // database connection
 connectDB();
